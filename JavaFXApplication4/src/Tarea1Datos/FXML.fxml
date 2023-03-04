@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="316.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapp.FXMLDocumentController">
+    <children>
+        <Button layoutX="277.0" layoutY="206.0" onAction="#btnSuma" text="+" />
+      <Text layoutX="25.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultado:" wrappingWidth="59.033203125" />
+      <Text layoutX="33.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Persona" />
+      <Text layoutX="277.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operaciones" />
+      <Text layoutX="33.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+      <Text layoutX="33.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Provincia" />
+      <Text layoutX="33.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edad" />
+      <Button layoutX="46.0" layoutY="206.0" mnemonicParsing="false" onAction="#btnAgregar" text="Agregar Persona" />
+      <Button layoutX="310.0" layoutY="206.0" mnemonicParsing="false" onAction="#btnResta" text="-" />
+      <Button layoutX="343.0" layoutY="206.0" mnemonicParsing="false" onAction="#btnMult" text="x" />
+      <Button layoutX="378.0" layoutY="206.0" mnemonicParsing="false" onAction="#btnDiv" text="/" />
+      <Text layoutX="277.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Persona #1" />
+      <Text layoutX="277.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Persona #2" />
+      <ComboBox layoutX="86.0" layoutY="134.0" prefHeight="25.0" prefWidth="149.0" promptText="Seleccione:" visibleRowCount="7" />
+      <TextField fx:id="tfNombre" layoutX="86.0" layoutY="108.0" />
+      <TextField fx:id="tfEdad" layoutX="86.0" layoutY="159.0" />
+      <ChoiceBox layoutX="279.0" layoutY="117.0" prefWidth="150.0" />
+      <ChoiceBox layoutX="279.0" layoutY="168.0" prefWidth="150.0" />
+      <Label fx:id="lbResult" layoutX="85.0" layoutY="20.0" prefHeight="17.0" prefWidth="189.0" text="Nombre" />
+    </children>
+</AnchorPane>
