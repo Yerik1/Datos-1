@@ -4,11 +4,13 @@
  */
 package javafxapp;
 
+import Tarea1Datos.Persona;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -24,8 +26,13 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TextField tfEdad;
     @FXML
+    private ChoiceBox<String> cbPers1;
+    @FXML
+    private ChoiceBox<String> cbPers2;
+    @FXML
     private Label lbResult;
-    
+    @FXML
+    private ChoiceBox<String> cbProvincia;
 
     /**
      * Initializes the controller class.
@@ -33,17 +40,18 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        cbProvincia.getItems().setAll("San Jose","Alajuela","Cartago","Heredia","Limon","Puntarenas","Guanacaste");
     }    
 
     @FXML
     private void btnSuma(ActionEvent event) {
-        String name= tfNombre.getText();
-        lbResult.setText("Hola "+name);
     }
 
-    private void btnAdd(ActionEvent event) {
-        String name= tfNombre.getText();
-        lbResult.setText("Hola "+name);
+    @FXML
+    private void btnAgregar(ActionEvent event) {
+        Persona persona = new Persona(tfNombre.getText(),Integer.parseInt(tfEdad.getText()),cbProvincia.getValue());
+        cbPers1.getItems().add(persona.getNombre());
+        cbPers2.getItems().add(persona.getNombre());
     }
 
     @FXML
@@ -56,12 +64,6 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void btnDiv(ActionEvent event) {
-    }
-
-    @FXML
-    private void btnAgregar(ActionEvent event) {
-        String name= tfNombre.getText();
-        lbResult.setText("Hola "+name);
     }
     
 }
