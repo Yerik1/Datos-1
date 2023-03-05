@@ -23,11 +23,27 @@ public class Lista {
             this.head=node;
         }else{
             temp=this.head;
-            while(temp.next!=null){
-                temp=temp.next;
+            while(temp.getNext()!=null){
+                temp=temp.getNext();
             }
-            temp.next=node;
+            temp.setNext(node);
         }
         this.largo++;
+    }
+    
+    public void setHead(Nodo node){
+        this.head=node;
+    }
+    
+    public void setLargo(int largo){
+        this.largo=largo;
+    }
+    
+    public Nodo getHead(){
+        return this.head;
+    }
+    
+    public int getLargo(){
+        return this.largo;
     }
 }
